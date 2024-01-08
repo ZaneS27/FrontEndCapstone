@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
+import Nav from './components/Nav';
+import Header from './components/Header';
 
 function App() {
   return (
  
-    <div>
-      <h1>Meta Frontend Developer Capstone Starter Files</h1>
-    </div>
+    <>
+      <Nav></Nav>
+      <Header></Header>
+    </>
   );
 }
 
