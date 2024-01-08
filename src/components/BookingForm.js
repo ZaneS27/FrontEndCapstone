@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-const BookingForm = () => {
+const BookingForm = (props) => {
     const [date, setDate] = useState("");
     const [times, setTimes] = useState("");
     const [guests, setGuests] = useState("");
-    const [occassion, setOccassion] = useState("");
-    
+    const [occasion, setOccasion] = useState("");
+
     const handleSubmit = (e) => {
         e.preventdefault();
         props.SubmitForm(e);
