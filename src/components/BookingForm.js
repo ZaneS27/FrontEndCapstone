@@ -1,6 +1,9 @@
-import React, {useState} from 'react';
+import React from "react";
+import { useState } from "react";
 
 const BookingForm = (props) => {
+
+
     const [date, setDate] = useState("");
     const [times, setTimes] = useState("");
     const [guests, setGuests] = useState("");
@@ -31,9 +34,7 @@ const BookingForm = (props) => {
                         <label htmlFor='book-time'>Choose Time:</label>
                         <select id="book-time" value={times} onChange={(e) => setTimes(e.target.value)}>
                             <option value="">Select a Time</option>
-                            {
-                                props.availableTimes.availableTimes.map(availableTimes => {return <option key={availableTimes}>{availableTimes}</option>})
-                            }
+                            {props.availableTimes.availableTimes.map(availableTimes => {return <option key={availableTimes}> {availableTimes} </option>})}
                         </select>
                     </div>
 
